@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Fouad CV</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
+
+  <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+
+  </head>
+<body onload="initialize()">
+  <header>
+  </header>
+
+<section id="section1" onfocus="getFocus()">
+  <main>
+  <div class="navigation">
+    <ul class="menu">
+      <li><a class="actif"><img id="home" src="resources/home.png"></a></li>
+      <li><a href="#section2"><img id="scolarite" src="resources/scolarite.png"></a></li>
+      <li><a href="#section3"><img id="skills" src="resources/skills.png"></a></li>
+      <li><a href="#section4"><img id="experience" src="resources/work.png"></a></li>
+      <li><a href="#section5"><img id="contact" src="resources/contact.png"></a></li>
+    </ul>
+  </div>
+
+    <div id="corps">
+      <div id="texte">
+        <label class="titre" style="color:#df5f5f;">Medjahed Fouad</label><br>
+        <label class="titre" >master 1 MIAGE</label><br>
+      </div>
+    </div>
+  </main>
+    <div class="footer">
+      <div>
+        <label class="recherche"> recherche stage + alternance développeur fullstack à partir de juin 2021</label><br>
+        <label > técharger mon cv au format pdf :</label>
+      </div>
+      <div>
+        <a id="droite" href = "resources/Fouad_CV(2).pdf" download="Fouad_CV.pdf" target="_blank"> <img id="fleche" src="resources/bas2.png"></a>
+      </div>
+    </div>
+</section>
+
+<section id="section2" onscroll="section2()">
+  <main>
+  <div class="navigation">
+    <ul class="menu">
+      <li><a href="#section1"><img id="home" src="resources/home.png"></a></li>
+      <li><a><img id="scolarite" src="resources/scolarite.png"></a></li>
+      <li><a href="#section3"><img id="skills" src="resources/skills.png"></a></li>
+      <li><a href="#section4"><img id="experience" src="resources/work.png"></a></li>
+      <li><a href="#section5"><img id="contact" src="resources/contact.png"></a></li>
+    </ul>
+  </div>
+  <div id="carte">
+    <div id="mapid"></div>
+  </div>
+</main>
+
+</section>
+
+<section id="section3">
+<main>
+  <div class="navigation">
+    <ul class="menu">
+      <li><a href="#section1"><img id="home" src="resources/home.png"></a></li>
+      <li><a href="#section2"><img id="scolarite" src="resources/scolarite.png"></a></li>
+      <li><a><img id="skills" src="resources/skills.png"></a></li>
+      <li><a href="#section4"><img id="experience" src="resources/work.png"></a></li>
+      <li><a href="#section5"><img id="contact" src="resources/contact.png"></a></li>
+    </ul>
+  </div>
+  <div id="competence">
+    <div id="comphaut">
+      <a ><img class="competences" src="resources/java.png"></a></li>
+      <a ><img class="competences" src="resources/spring.png"></a></li>
+      <a ><img class="competences" src="resources/node.png"></a></li>
+      <a ><img class="competences" src="resources/python.png"></a></li>
+      <a ><img class="competences" src="resources/angular.png"></a></li>
+    </div>
+    <div id="compmid">
+      <a ><img class="competences" src="resources/html.png"></a></li>
+      <a ><img class="competences" id="css" src="resources/css.png"></a></li>
+      <a ><img class="competences" src="resources/js.png"></a></li>
+      <a ><img class="competences" src="resources/post.png"></a></li>
+      <a ><img class="competences" src="resources/php.png"></a></li>
+    </div>
+    <div id="compbas">
+      <a ><img class="competences" src="resources/elm.png"></a></li>
+      <a ><img class="competences" src="resources/haskell.png"></a></li>
+      <a ><img class="competences" src="resources/ocaml.png"></a></li>
+      <a ><img class="competences" src="resources/oracle.jpg"></a></li>
+      <a ><label class="competences">Systèmes d'informations</label></a></li>
+    </div>
+    <div id="langues">
+      <a ><img class="competences" src="resources/anglais.png"></a></li>
+    </div>
+  </div>
+  </main>
+</section>
+
+<section id="section4">
+  <div class="navigation">
+    <ul class="menu">
+      <li><a href="#section1"><img id="home" src="resources/home.png"></a></li>
+      <li><a href="#section2"><img id="scolarite" src="resources/scolarite.png"></a></li>
+      <li><a href="#section3"><img id="skills" src="resources/skills.png"></a></li>
+      <li><a><img id="experience" src="resources/work.png"></a></li>
+      <li><a href="#section5"><img id="contact" src="resources/contact.png"></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="section5">
+  <div class="navigation">
+    <ul class="menu">
+      <li><a href="#section1"><img id="home" src="resources/home.png"></a></li>
+      <li><a href="#section2"><img id="scolarite" src="resources/scolarite.png"></a></li>
+      <li><a href="#section3"><img id="skills" src="resources/skills.png"></a></li>
+      <li><a href="#section4"><img id="experience" src="resources/work.png"></a></li>
+      <li><a><img id="contact" src="resources/contact.png"></a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+   <form action="http://fouadcv.alwaysdata.net/mailer.php" name="envoi" method=POST enctype="multipart/form-data">
+   <div class="row">
+     <div class="col-25">
+       <label for="fname"><b>Nom & prénom : </b></label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="nom" name="nom" placeholder="Votre nom.." required="required">
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-25">
+       <label for="lname"><b>socièté : </b></label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="societe" name="societe" placeholder="Votre socièté.. " required="required">
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-25">
+       <label for="mail"><b>E-mail : </b></label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="mail" name="mail" placeholder="Votre e-mail.." required="required">
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-25">
+       <label for="sujet"><b>Sujet : </b></label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="sujet" name="sujet" placeholder="Le sujet de votre message.." required="required">
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-25">
+       <label for="message"><b>Message :</b></label>
+     </div>
+     <div class="col-75">
+       <textarea id="message" name="message" placeholder="Votre message.." required="required" style="height:200px"></textarea>
+     </div>
+     </div>
+
+  <div class="row"  id="divBouton">
+      <button type="submit">Soumettre votre message</button>
+   </div>
+   <br>
+ </form>
+</div>
+</section>
+
+
+
+
+</body>
+
+<script type="text/javascript">
+function initialize() {
+        var map = L.map('mapid',{scrollWheelZoom:false}).setView([50.62925, 3.057256], 12);
+
+        var markers = new Array();
+
+        var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { // LIGNE 20
+            attribution: 'Â© OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        var Icon = L.icon({
+          iconUrl: 'resources/marker.png',
+          iconSize: [40, 40], // size of the icon
+          popupAnchor: [0,-15]
+        });
+
+
+        var miagePopup = "Université de Lille<br/>Master MIAGE<br/>2017-2022<br>"
+        +"<img src='resources/univ.png' alt='maptime logo gif' width='350px'/>";
+
+        var baggioPopup = "Lycée César Baggio<br/>Classe préparatoire aux grandes écoles<br/>2015-2017<br>"
+        +"<img src='resources/baggio.png' alt='maptime logo gif' width='350px'/>";
+
+        var pierrePopup = "Groupe scolaire La Salle anciènement : Saint Pierre<br/>BAC S<br/>2012-2015<br>"
+        +"<img src='resources/saintpierre.jpg' alt='maptime logo gif' width='350px'/>";
+
+
+        var customOptions =
+          {
+          'maxWidth': '500',
+          'className' : 'custom'
+          }
+
+
+        var saint_pierre = L.marker([50.628540821616596, 3.0391921372338166], {icon: Icon}).bindPopup(pierrePopup,customOptions).addTo(map);
+
+        var cesar_baggio = L.marker([50.61718500923686, 3.066120623042388], {icon: Icon}).bindPopup(baggioPopup,customOptions).addTo(map);
+
+        var universite_lille = L.marker([50.609166492609724, 3.140845276235375], {icon: Icon}).bindPopup(miagePopup,customOptions).addTo(map);
+
+    }
+
+</script>
+
+
+</html>
